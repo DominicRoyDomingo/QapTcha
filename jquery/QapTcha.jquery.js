@@ -48,14 +48,14 @@ jQuery.QapTcha = {
 				revert: function(){
 					if(opts.autoRevert)
 					{
-						if(parseInt(Slider.css("left")) > (bgSlider.width()-Slider.width()-1)) return false;
+						if(parseInt(Slider.css("left")) > (bgSlider.width()-Slider.width()-10)) return false;
 						else return true;
 					}
 				},
 				containment: bgSlider,
 				axis:'x',
 				stop: function(event,ui){
-					if(ui.position.left > (bgSlider.width()-Slider.width()-1))
+					if(ui.position.left > (bgSlider.width()-Slider.width()-10))
 					{
 						// set the SESSION iQaptcha in PHP file
 						$.post(opts.PHPfile,{
